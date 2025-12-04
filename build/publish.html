@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrameIt - Published Campaign</title>
+    <link rel="stylesheet" href="frameit.css">
+       <link rel="icon" type="image/png" href="FrameIt-Logo.png">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-square"></div>
+                <h1>FrameIt</h1>
+            </div>
+            <nav class="nav">
+                <button class="btn-publish" id="downloadBtn">Download Image</button>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+      <div class="frameit-container">
+        <div class="frameit-left">
+          <div class="publish-image-section">
+            <div class="publish-image-stack">
+              <img id="userImage" class="publish-user-image" src="" alt="User" style="display:none;" />
+              <img id="frameImage" class="publish-frame-image" src="" alt="Frame" />
+            </div>
+            <button id="addUserImageBtn" class="btn-add-image">Add Image</button>
+            <input type="file" id="userImageInput" accept="image/*" style="display:none;" />
+          </div>
+        </div>
+        <div class="frameit-right">
+          <div class="publish-info-section">
+            <div class="publish-link-row" style="margin-bottom:1.2rem;">
+              <span id="publishLink" class="publish-link"></span>
+              <button id="copyLinkBtn" class="btn-copy-link">Copy Link</button>
+            </div>
+            <h2 id="publishTitle"></h2>
+            <p id="publishDesc"></p>
+            <div class="publish-meta">
+              <div style="display:flex;flex-direction:column;gap:0.3rem;width:100%;">
+<div class="captiontitle">
+<strong style="margin-bottom:0.1rem;">Caption Template</strong> <button id="copyCaptionBtn" class="btn-copy-link" style="padding:0.2rem 0.8rem;font-size:0.95rem;">Copy</button>
+</div> 
+                <div style="display:flex;align-items:center;gap:0.7rem;width:100%;">
+                  <span id="publishCaption" style="flex:1;"></span>
+                  
+                </div>
+              </div>
+              <div><strong>Visibility:</strong> <span id="publishVisibility"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Loading Modal -->
+    <div id="loadingModal" class="modal" style="display:none;">
+      <div class="modal-content">
+        <div class="logo logo-animate">
+          <div class="logo-square"></div>
+          <h1>FrameIt</h1>
+        </div>
+        <div class="loading-message">Combining your images please wait...</div>
+      </div>
+    </div>
+    <script type="module" src="pub.js"></script>
+</body>
+</html>

@@ -1,0 +1,578 @@
+/* FrameIt Page Styles - same as styles.css, but can be customized later */
+@import url('styles.css');
+
+/* You can add page-specific styles below if needed */
+
+.btn-publish {
+    background: linear-gradient(135deg, #00e0a8, #1a1a1a);
+    color: #181818;
+    border: 2px solid #00e0a8;
+    border-radius: 8px;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-publish:hover {
+    background: linear-gradient(135deg, #00e0a8 60%, #1a1a1a 100%);
+    color: #fff;
+    border-color: #00e0a8;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 224, 168, 0.2);
+}
+
+.btn-publish:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(0, 224, 168, 0.15);
+}
+
+.main {
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.frameit-container {
+  display: flex;
+  gap: 2.5rem;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 3rem 5vw 0 5vw;
+  box-sizing: border-box;
+  height: calc(100vh - 100px);
+  min-height: 0;
+}
+
+.frameit-left, .frameit-right {
+  flex: none;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.frameit-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+
+
+.frameit-right::-webkit-scrollbar {
+  width: 0; /* hide scrollbar for WebKit-based browsers */
+  height: 0;
+}
+.frameit-right::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+.frameit-right::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.drag-drop-area {
+  background: #181818;
+  border: 2.5px dashed #00e0a8;
+  border-radius: 16px;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  position: relative;
+}
+.drag-drop-area:hover, .drag-drop-area.dragover {
+  border-color: #00ffc3;
+  background: #232b27;
+}
+.drag-drop-content {
+  text-align: center;
+  color: #b0b0b0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.drag-drop-content svg {
+  margin-bottom: 0.5rem;
+}
+.drag-drop-content p {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+.drag-drop-content span {
+  color: #00e0a8;
+  font-size: 0.95rem;
+}
+
+.frame-details-form {
+  background: linear-gradient(135deg, #181818 80%, #232b27 100%);
+  border-radius: 22px;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  box-shadow: 0 8px 32px rgba(0,224,168,0.08), 0 2px 12px rgba(0,0,0,0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+
+  width: 100%;
+  max-height: 100%;
+  box-sizing: border-box;
+  overflow: auto;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  border: 1.5px solid #222;
+  position: relative;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+.frame-details-form:hover {
+  box-shadow: 0 12px 40px rgba(0,224,168,0.13), 0 2px 12px rgba(0,0,0,0.22);
+  border: 1.5px solid #00e0a8;
+}
+.frame-details-form h2 {
+  margin-bottom: 0.7rem;
+  color: #00e0a8;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+.frame-details-form label {
+  font-size: 1.05rem;
+  color: #e0e0e0;
+  margin-bottom: 0.2rem;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+}
+.frame-details-form input[type="text"],
+.frame-details-form input[type="url"],
+.frame-details-form textarea {
+  background: #232323;
+  color: #fff;
+  border: 1.5px solid #333;
+  border-radius: 10px;
+  padding: 0.85rem 1.1rem;
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(0,224,168,0.04);
+  font-family: inherit;
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+.frame-details-form input:focus,
+.frame-details-form textarea:focus {
+  border: 1.5px solid #00e0a8;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0,224,168,0.10);
+}
+.frame-details-form textarea {
+  resize: vertical;
+  min-height: 100px;
+  max-height: 500px;
+}
+
+.frame-details-form::-webkit-scrollbar {
+  width: 0; /* hide scrollbar for WebKit-based browsers */
+  height: 0;
+}
+.frame-details-form::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+.frame-details-form::-webkit-scrollbar-track {
+  background: transparent;
+}
+.visibility-options {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.3rem;
+  flex-direction: column;
+}
+
+.visibility-option {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  background: #222;
+  border-radius: 10px;
+  padding: 1em 1.2em;
+  transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+  border: 2px solid transparent;
+  cursor: pointer;
+  position: relative;
+  min-height: 56px;
+}
+
+.visibility-option input[type="radio"] {
+  accent-color: #00e0a8;
+  margin-right: 0.7em;
+  margin-top: 0;
+  align-self: center;
+  width: 20px;
+  height: 20px;
+}
+
+.visibility-option .vis-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5em;
+  width: 24px;
+  height: 24px;
+}
+
+.visibility-option .vis-label {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #00e0a8;
+  margin-right: 0.7em;
+  align-self: center;
+}
+
+.visibility-option .vis-desc {
+  font-size: 0.98rem;
+  color: #b0b0b0;
+  margin-left: 0.5em;
+  font-weight: 400;
+  align-self: center;
+}
+
+.visibility-option:hover, .visibility-option input[type="radio"]:focus + .vis-icon {
+  background: #232b27;
+  border: 2px solid #00e0a8;
+  box-shadow: 0 2px 12px rgba(0,224,168,0.10);
+}
+
+.visibility-option input[type="radio"]:checked ~ .vis-label {
+  color: #00ffc3;
+}
+
+.publish-container {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 3rem auto 0 auto;
+  padding: 0 2rem;
+  align-items: flex-start;
+}
+.publish-image-section {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.publish-image-stack {
+  position: relative;
+  width: 520px;
+  height: 520px;
+  background: #181818;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,224,168,0.08);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.publish-user-image, .publish-frame-image {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  object-fit: contain;
+  border-radius: 18px;
+  pointer-events: none;
+}
+.publish-frame-image {
+  z-index: 2;
+}
+.publish-user-image {
+  z-index: 1;
+}
+.btn-add-image {
+  background: linear-gradient(135deg, #00e0a8, #1a1a1a);
+  color: #181818;
+  border: 2px solid #00e0a8;
+  border-radius: 8px;
+  padding: 0.7rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 1rem;
+}
+.btn-add-image:hover {
+  background: linear-gradient(135deg, #00e0a8 60%, #1a1a1a 100%);
+  color: #fff;
+}
+.publish-info-section {
+  flex: 1 1 0;
+  
+  background: #181818;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0,224,168,0.08);
+  padding: 10rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+ width:100%;
+
+}
+.publish-info-section h2 {
+  color: #00e0a8;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.publish-link-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+.publish-link {
+  color: #00e0a8;
+  font-size: 1.05rem;
+  background: #232323;
+  padding: 0.4em 0.8em;
+  border-radius: 8px;
+  word-break: break-all;
+  cursor: pointer;
+}
+.btn-copy-link {
+  background: none;
+  color: #00e0a8;
+  border: 1.5px solid #00e0a8;
+  border-radius: 8px;
+  padding: 0.4em 1.2em;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-copy-link:hover {
+  background: #232b27;
+  color: #fff;
+}
+.publish-meta {
+  margin-top: 1.2rem;
+  color: #b0b0b0;
+  font-size: 1.05rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#framePreview {
+  display: none;
+  width: 520px;
+  height: 520px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 16px;
+  margin: auto;
+  background: #181818;
+  box-shadow: 0 2px 16px #000a;
+}
+
+.btn-remove-image {
+  display: none;
+  background: linear-gradient(135deg, #1a1a1a, #00e0a8);
+  color: #fff;
+  border: 2px solid #00e0a8;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin: 12px auto 0 auto;
+  box-shadow: 0 2px 10px #000a;
+}
+.btn-remove-image:hover {
+  background: linear-gradient(135deg, #00e0a8 60%, #1a1a1a 100%);
+  color: #181818;
+  border-color: #00e0a8;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(24,24,24,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.modal-content {
+  background: #232b27;
+  border-radius: 18px;
+  padding: 2.5rem 3.5rem;
+  box-shadow: 0 8px 32px rgba(0,224,168,0.13), 0 2px 12px rgba(0,0,0,0.22);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.logo-animate .logo-square {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #00e0a8, #1a1a1a);
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  animation: spin 1.2s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.loading-message {
+  color: #00e0a8;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .frameit-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 0.5rem;
+  }
+  .frame-details-form {
+    min-width: 90vw;
+    max-width: 100vw;
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+  }
+  .frameit-right {
+    align-items: stretch;
+  }
+  .visibility-options {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .publish-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 0.5rem;
+  }
+  .publish-image-stack {
+    width: 90vw;
+    height: 90vw;
+    max-width: 340px;
+    max-height: 340px;
+  }
+  .publish-info-section {
+    min-width: 90vw;
+    max-width: 100vw;
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .header-container {
+   
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 0.3rem;
+    gap: 0.5rem;
+
+  }
+
+    .header-container .nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+  .logo, .logo-animate {
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .main {
+    padding: 0.5rem 0 0 0;
+  }
+  .frameit-container {
+    flex-direction: column !important;
+    align-items: stretch;
+    gap: 1.5rem;
+    width: 100vw;
+    max-width: 100vw;
+    padding: 0 0.5rem;
+  }
+  .frameit-left, .frameit-right {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .drag-drop-area {
+    width: 100%;
+    min-height: 180px;
+    margin-bottom: 1rem;
+  }
+  .frame-details-form {
+    width: 100%;
+    padding: 10px;
+  }
+  .frame-details-form input,
+  .frame-details-form textarea {
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .frame-details-form label {
+    font-size: 1rem;
+    margin-top: 0.7rem;
+  }
+  .visibility-options {
+    flex-direction: column !important;
+    gap: 0.7rem;
+    width: 100%;
+  }
+  .btn-publish {
+    width: 100%;
+    max-width: 320px;
+    margin: 1.2rem auto 0 auto;
+    display: block;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+  #removeFrameBtn {
+    max-width: 100%;
+    width: 100%;
+    margin: 1rem 0 0 0;
+  }
+  .modal-content {
+    min-width: 98vw;
+    max-width: 100vw;
+    padding: 1.2rem 0.2rem;
+  }
+  .main, .frameit-container {
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+}

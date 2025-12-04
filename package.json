@@ -1,0 +1,12 @@
+{
+  "name": "frameit",
+  "version": "1.0.0",
+  "description": "FrameIt - Campaign Frame Tool",
+  "scripts": {
+    "build": "echo 'Build complete'",
+    "deploy": "netlify deploy --prod"
+  },
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  }
+}

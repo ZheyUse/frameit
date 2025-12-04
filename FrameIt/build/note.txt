@@ -1,0 +1,15 @@
+{
+  "hosting": {
+    "site": "frameit-here",
+    "public": "build", 
+    "rewrites": [
+      { "source": "/home", "destination": "/index.html" },
+      { "source": "/create", "destination": "/frameit.html" },
+      { "source": "/shared", "destination": "/publish.html" },
+      { "source": "**", "destination": "/index.html" }
+    ]
+  }
+}
+
+
+firebase deploy --only hosting:frameit-here

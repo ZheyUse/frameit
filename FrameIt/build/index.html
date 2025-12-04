@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrameIt</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="FrameIt-Logo.png">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <div class="logo-square"></div>
+                <h1>FrameIt</h1>
+            </div>
+            <nav class="nav">
+                <button class="btn-get-started" id="getStartedBtn">Get Started</button>
+            </nav>
+        </div>
+    </header>
+    
+
+    <main class="main">
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Welcome to FrameIt</h2>
+                <p>Start a campaign and upload your frames</p>
+            </div>
+        </section>
+       
+    </main>
+    <!-- Showcase Sections: OUTSIDE main, stacked vertically -->
+    <section class="carousel-section">
+        <div class="carousel-container">
+            <button class="carousel-btn" id="carouselPrev">&#8592;</button>
+            <img id="carouselImage" class="carousel-image" src="https://i.pinimg.com/736x/8a/f0/c5/8af0c5f573a9d22d4e3e655847bf6160.jpg" alt="FrameIt Sample" />
+            <button class="carousel-btn" id="carouselNext">&#8594;</button>
+        </div>
+    </section>
+    <section class="showcase-text-section"><br><br>
+        <div class="showcase-text">
+            <h3>Use FrameIt for free now</h3>
+        </div>
+    </section>
+    <section class="sample-images-group-section">
+        <h4>FrameIt Samples</h4>
+        <div class="sample-images" id="frameItSamples"></div>
+    </section>
+    <section class="sample-images-group-section">
+        <h4>CreateIt Samples</h4>
+        <div class="sample-images" id="createItSamples"></div>
+    </section>
+
+    <!-- Popup Modal -->
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal" id="startCampaignModal" tabindex="-1" aria-modal="true" role="dialog">
+        <div class="modal-content">
+            <h2 class="modal-title">Start a campaign now</h2>
+            <p class="modal-subtext">Support starts with your profile</p>
+            <div class="modal-options">
+                <div class="modal-option">
+                    <div class="modal-option-icon frame-icon"></div>
+                    <h3>FrameIt Now</h3>
+                    <p class="option-desc">Upload your png frame file and start your campaign in just one click</p>
+                    <div class="option-samples">
+                        <div class="sample-card">
+                            <img src="https://i.pinimg.com/736x/8a/f0/c5/8af0c5f573a9d22d4e3e655847bf6160.jpg" alt="Sample" />
+                        </div>
+                        <div class="sample-card">
+                            <img src="https://i.pinimg.com/736x/5b/49/f7/5b49f79b844af96f395b0fc519732e2a.jpg" alt="Sample" />
+                        </div>
+                        <div class="sample-card">
+                            <img src="https://i.pinimg.com/736x/67/81/bc/6781bcd0751259f46b7cf1a8cab289ec.jpg" alt="Sample" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-option">
+                    <div class="modal-option-icon bg-icon"></div>
+                    <h3>CreateIt Now <span class="new-badge">Unavailable!</span></h3>
+                    <p class="option-desc">Create a fresh frame from scratch</p>
+                    <div class="option-samples">
+                        <div class="sample-card">
+                            <img src="https://i.pinimg.com/736x/25/b6/c8/25b6c8d1a14730ed6b2bdab6f6e6a756.jpg" alt="Sample" />
+                        </div>
+                        <div class="sample-card">
+                            <img src="https://i.pinimg.com/736x/c5/42/91/c542915027e5bca58dc23cdc49ff3921.jpg" alt="Sample" />
+                        </div>
+                        <div class="sample-card">
+                            <img src="https://i.pinimg.com/736x/48/1b/43/481b435f5ef3da3765505787e65d6b61.jpg" alt="Sample" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="modal-cancel" id="modalCancelBtn">Cancel</button>
+                <button class="modal-get-started" id="modalGetStartedBtn" disabled>Get Started</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
